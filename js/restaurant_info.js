@@ -2,6 +2,15 @@ let restaurant;
 var newMap;
 
 /**
+ * Service Worker
+ */
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sw.js").catch(err => {
+    console.log(err);
+  });
+}
+
+/**
  * Initialize map as soon as the page is loaded.
  */
 document.addEventListener("DOMContentLoaded", event => {

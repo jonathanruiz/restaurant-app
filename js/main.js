@@ -198,6 +198,7 @@ createRestaurantHTML = restaurant => {
   const more = document.createElement("a");
   more.innerHTML = "View Details";
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.setAttribute("role", "button");
   more.tabIndex = 3;
   li.append(more);
 
